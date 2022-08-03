@@ -1,3 +1,4 @@
+#+ endpoint: http://10.5.27.50:7200/
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX org-lab: <http://purl.org/zhejianglab/irobot-center/ontologies/org-lab#>
