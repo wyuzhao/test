@@ -1,0 +1,22 @@
+#+ endpoint_in_url: False
+#+ description: 由项目名称查询参与者的机构名称
+#+ defaults:
+#+   - projectName: "深海软体机器智能驱动技术"
+
+PREFIX org: 	<http://www.w3.org/ns/org#>
+PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX gr: <http://purl.org/goodrelations/v1#>
+
+
+SELECT DISTINCT ?formal_orgname WHERE {
+    ?project foaf:name ?_projectName ;
+            org:hasMember ?person.
+
+   ?type rdfs:subClassOf* gr:BusinessEntity.
+
+    ?formal_org org:hasMember ?person ;
+                a ?type;
+              foaf:name ?formal_orgname .
+}
