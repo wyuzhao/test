@@ -2,7 +2,7 @@
 #+ description: 由项目名称查询某参与者的成果
 #+ defaults:
 #+   - projectName: "深海软体机器智能驱动技术"
-#+   - personName: ?personname
+#+   - personName: "李铁风"
 
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX org: <http://www.w3.org/ns/org#>
