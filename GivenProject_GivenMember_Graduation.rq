@@ -1,0 +1,19 @@
+#+ endpoint_in_url: False
+#+ description: 由项目名称查询参与者的机构名称
+#+ defaults:
+#+   - projectName: "深海软体机器智能驱动技术"
+#+   - persontName: "李铁风"
+
+
+
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX bob: <http://purl.org/zhejianglab/irobot-center/ontologies/robotbrain#>
+PREFIX poap: <http://purl.org/zhejianglab/irobot-center/ontologies/poap#>
+select distinct ?GraduationAwardname where {
+    ?project foaf:name ?_projectName;
+             org:hasMember ?person.    
+    ?person bob:hasGraduation ?Graduation;
+            foaf:name ?_persontName.    
+    ?GraduationAward foaf:name ?GraduationAwardname.
+}
