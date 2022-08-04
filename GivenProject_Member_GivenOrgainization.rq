@@ -2,7 +2,6 @@
 #+ description: 参与某项目的人当中属于某机构的都有谁
 #+ defaults:
 #+   - projectName: "深海软体机器智能驱动技术"
-#+   - orgainizationName: "浙江大学"
 
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX org: <http://www.w3.org/ns/org#>
