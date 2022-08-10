@@ -11,7 +11,10 @@
 #+ summary: "Search for Agrovoc terms"
 #+ defaults:
 #+   - projectName: "深海软体机器智能驱动技术"
-# Used for maintenance
+#+ enumerate:
+#+   - personname:
+#+     - "李铁风"
+#+     - "梁艺鸣"
 
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX org: <http://www.w3.org/ns/org#>
@@ -20,6 +23,6 @@ select ?project ?person ?Result ?Resultname where {
     ?project foaf:name ?_projectName;
              org:hasMember ?person.    
     ?person poap:hasResult ?Result;
-            foaf:name ?__personname.
+            foaf:name ?_personname.
     ?Result foaf:name ?Resultname .
 }
