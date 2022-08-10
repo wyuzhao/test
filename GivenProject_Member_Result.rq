@@ -1,5 +1,13 @@
+
+#+ transform: {
+#+     "project": "?project",
+#+     "person": "?person",
+#+     "Result": "?Result",
+#+     "$Resultname": "Resultname"
+#+   }
 #+ endpoint_in_url: False
 #+ description: 某项目的参与者都有哪些成果
+#+ summary: "Search for Agrovoc terms"
 #+ defaults:
 #+   - projectName: "深海软体机器智能驱动技术"
 
